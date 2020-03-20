@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Resident {
+public class Resident implements Comparable{
     protected Hospital hospital;
     protected List<Hospital> hospitalPreferences = new ArrayList();
     public Resident(Hospital ... hospitalPreferences) {
@@ -24,5 +24,10 @@ public class Resident {
 
     public List<Hospital> getHospitalPreferences() {
         return hospitalPreferences;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

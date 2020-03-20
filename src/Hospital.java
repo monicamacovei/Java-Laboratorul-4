@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Hospital {
+public class Hospital implements Comparable {
     protected int capacity;
     public Hospital(int capacity) {
         this.capacity = capacity;
@@ -28,5 +28,10 @@ public class Hospital {
         return "Hospital{" +
                 "capacity=" + capacity +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return this.capacity - ((Hospital)o).capacity;
     }
 }
